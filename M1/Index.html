@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular</title>
+</head>
+<body ng-init="newtitle = 'Anglar'; items = [0,1,2,3];">
+
+
+
+
+	<!-- this is a veriable text  -->
+
+	Hallow {{newtitle}}
+
+	<input type="text" ng-model="q" />
+
+
+	<!-- Use of ng-repeat  -->
+
+	<div ng-repeat = "item in items | filter:q" ng-hide = "hide">{{item}}</div>
+
+	<button ng-click = "hide=!hide">Toggle Show/Hide</button>
+	<button ng-click = "items[items.length] = items.length">Add New item</button>
+
+
+	<script type="text/javascript" src = "angular.min.js" ></script>
+</body>
+</html>
